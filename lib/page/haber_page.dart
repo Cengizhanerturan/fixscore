@@ -160,7 +160,7 @@ class _HaberPageState extends State<HaberPage> {
 
   Future<Haber> _haberGetir() async {
     var response = await http.get(Uri.parse(
-        'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=football&pageNumber=1&pageSize=10&autoCorrect=true&safeSearch=true&withThumbnails=true&fromPublishedDate=null&toPublishedDate=null&rapidapi-key=56eed295b5mshb916d17972b6d84p1b42f7jsn03e880efc0c6'));
+        'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI?q=football&pageNumber=1&pageSize=10&autoCorrect=true&safeSearch=true&withThumbnails=true&fromPublishedDate=null&toPublishedDate=null&rapidapi-key={APIKEY}'));
     if (response.statusCode == 200) {
       return Haber.fromJson(jsonDecode(response.body));
     } else {
